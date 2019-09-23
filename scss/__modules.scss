@@ -1,0 +1,54 @@
+// button customization
+@media (max-width:625px){
+    .btn{
+        margin-top: 1em;
+    }
+    .container{
+        max-width: 100%;
+    }
+}
+.btn-group-sm>a> .btn, .btn-sm{
+    padding: .45rem .9rem;
+    font-size: 0.9375rem;
+}
+
+.btn--orange{
+    background-color: rgb(202, 92, 1);
+    color: white;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: .7em 4em;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.btn--orange:hover{
+    background-color: rgb(230, 230, 1);
+    color: rgb(255, 0, 0);
+}
+
+.btn--white{
+    background-color: #fff;
+    margin-top: .5em;
+}
+
+.btn--white:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+// home arrow down
+
+.home__arrow-down{
+    position: absolute;
+    bottom: -10%;
+    left: 48%;
+}
+
+.fab:hover{
+    text-decoration: underline;
+}
+
+.contact__social-icon{
+    text-decoration: none;
+}

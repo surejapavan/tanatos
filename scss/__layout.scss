@@ -1,0 +1,353 @@
+// General styles
+.container {
+ max-width: 75%;
+ margin-left: auto;
+ margin-right: auto;
+}
+.sections {
+ padding-top: 4em;
+ padding-bottom: 4em;
+}
+.txt-gen {
+ text-align: center;
+ padding: 2em;
+ .paragraph {
+  max-width: 65%;
+  margin: auto;
+ }
+}
+.fa-facebook {
+ color: rgba(0, 0, 255, 0.678);
+}
+.fa-google-plus {
+ color: rgb(199, 23, 23);
+}
+.fa-basketball-ball {
+ color: crimson;
+}
+.fa-behance-square {
+ color: lightblue;
+}
+ul {
+ padding: 0;
+}
+.form-group {
+ flex-wrap: wrap;
+ justify-content: center;
+}
+// header-section
+.fixed-top {
+ height: 3.7em;
+}
+.container:nth-child(1) {
+ position: relative;
+}
+/* MENU STYLES */
+.menu-wrap {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+ width: 100%;
+ height: 3em;
+ display: flex;
+ align-items: center;
+}
+.menu-wrap .toggler {
+ position: absolute;
+ top: 0;
+ right: 1%;
+ z-index: 2;
+ cursor: pointer;
+ width: 50px;
+ height: 50px;
+ opacity: 0;
+}
+.menu-wrap .hamburger {
+ position: absolute;
+ top: 0;
+ right: 1%;
+ z-index: 1;
+ width: 60px;
+ height: 60px;
+ padding: 1rem;
+ background: transparent;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+ position: relative;
+ flex: none;
+ width: 100%;
+ height: 2px;
+ background: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: all .4s ease;
+}
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::after,
+.menu-wrap .hamburger > div::before {
+ content: "";
+ position: absolute;
+ z-index: 1;
+ top: -10px;
+ width: 100%;
+ height: 2px;
+ background: inherit;
+}
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+ top: 10px;
+}
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+ transform: rotate(135deg);
+}
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:after,
+.menu-wrap .toggler:checked + .hamburger > div:before {
+ top: 0;
+ transform: rotate(90deg);
+}
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+ transform: rotate(225deg);
+}
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+ visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+ transform: scale(1);
+ transition-duration: .5s;
+}
+.menu-wrap .toggler:checked ~ .menu > div > div {
+ opacity: 1;
+ transition: opacity .4s ease .4s;
+}
+.menu-wrap .menu {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ visibility: hidden;
+ overflow: hidden;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.menu-wrap .menu > div {
+ background: #01316adb;
+ border-radius: 50%;
+ width: 200vw;
+ height: 200vw;
+ display: flex;
+ flex: none;
+ align-items: center;
+ justify-content: center;
+ transform: scale(0);
+ transition: all .4s ease;
+}
+.menu-wrap .menu > div > div {
+ text-align: center;
+ max-width: 90vw;
+ max-height: 100vh;
+ opacity: 0;
+ transition: opacity .4s ease;
+}
+.menu-wrap .menu > div > div > ul > li {
+ list-style: none;
+ color: #fff;
+ font-size: 2rem;
+ padding: .5em;
+ letter-spacing: 5px;
+}
+.menu-wrap .menu > div > div > ul > li > a {
+ color: inherit;
+ text-decoration: none;
+ transition: color .4s ease;
+}
+// Home-Section
+.home {
+ background-image: url("../img/promo_bg.png");
+ background-color: #474572cf;
+ background-blend-mode: multiply;
+ text-align: center;
+ color: #fff;
+ position: relative;
+ .container {
+  padding: 4em 18%;
+ }
+}
+// Services-Section
+.services__container {
+ display: flex;
+ justify-content: space-between;
+ text-align: center;
+ flex-wrap: wrap;
+ .services__service {
+  display: inline-block;
+  width: (100%/4);
+  min-width: 200px;
+ }
+}
+.services__service {
+ .services__icon-box {
+  background-color: #00b29866;
+  border-radius: 100%;
+  width: 150px;
+  margin: 1em auto;
+ }
+ .services__heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+ }
+ .services__paragraph {
+  line-height: 1.4em;
+ }
+}
+// subscribe-section
+.subscribe {
+ background-image: url("../img/newsletter_bg.png");
+ background-color: #474572cf;
+ background-blend-mode: multiply;
+ background-size: cover;
+ .form-group {
+  justify-content: center;
+ }
+}
+.subscribe__container {
+ text-align: center;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ .form-control {
+  display: inline-block;
+  width: 50%;
+  min-width: 300px;
+ }
+ .btn--orange{
+     padding: .54em 2em;
+ }
+}
+// OurWork-section
+.ourwork__works {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+}
+.ourwork__work {
+ width: 30%;
+ min-width: 222px;
+ text-align: center;
+ position: relative;
+ margin: 1em auto;
+ overflow: hidden;
+ .ourwork__img {
+  img {
+   width: 100%;
+  }
+ }
+ .ourwork__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 166, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: all .5s ease;
+  padding: 5vw 0;
+ }
+}
+.ourwork__work:hover .ourwork__text {
+ opacity: 1;
+}
+.ourwork__show-more {
+ display: flex;
+ justify-content: center;
+ padding: 2em;
+}
+// review section
+.reviews {
+ background-image: url("../img/reviews_bg.png");
+ background-color: #474572cf;
+ background-blend-mode: multiply;
+}
+.carousel-item {
+ text-align: center;
+ color: #fff;
+}
+.review__img {
+ border-radius: 50%;
+ margin-bottom: 2em;
+}
+// OurTeam Reviews
+.ourteam__team {
+ display: flex;
+ text-align: center;
+ justify-content: space-evenly;
+ align-items: baseline;
+ flex-wrap: wrap;
+ .ourteam__member {
+  width: 22%;
+  filter: grayscale(100%);
+  transition: all .5s ease;
+  min-width: 200px;
+ }
+}
+.ourteam__member-img {
+ img {
+  border-radius: 5% 5% 2% 2%;
+  width: 100%;
+  max-height: 220px;
+  transition: all .3s ease;
+ }
+}
+.ourteam__social-icon {
+ font-size: 25px;
+}
+.ourteam__title {
+ margin-top: .5em;
+}
+// modifiers ma rakh je ho ne
+.ourteam__member:hover {
+ filter: grayscale(0%);
+ transform: scale(1.05, 1.1);
+ .ourteam__member-img {
+  img {
+   border-bottom: 5px solid orange;
+  }
+ }
+}
+// contact section
+.contact {
+ background-image: url("../img/contact-bg.png");
+ background-color: #474572cf;
+ background-size: cover;
+ background-blend-mode: multiply;
+ color: #fff;
+}
+.form-group {
+ display: flex;
+ max-width: 70%;
+ margin-left: auto;
+ margin-right: auto;
+ justify-content: space-between;
+ align-items: center;
+}
+.footer__txt-input {
+ max-width: 49%;
+}
+.contact__social-icon {
+ margin-left: .5em;
+ img {
+  width: 40px;
+ }
+}
